@@ -4,274 +4,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>blackwing - Killer de Processos do Windows</title>
-  <link rel="icon" type="image" sizes="50x50" href="./src/assets/img/profile_icons/crowico.png">
+  <title>Blackwing - Process Killer for Windows</title>
+  <link rel="icon" type="image/png" href="./blackwing.png">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@500;700&display=swap"
+    rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./src/assets/css/style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- Google Fonts: Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg ">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="./blackwing.png" id="crowico" alt="blackwing Logo" class="logo-img">
+        <img src="./blackwing.png" alt="Blackwing Logo">
+        BLACKWING <span class="badge-danger">KILLER</span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#about"><i class="fas fa-info-circle"></i> Sobre</a>
+            <a class="nav-link" href="#features"><i class="fas fa-bolt mr-2"></i>Recursos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#features"><i class="fas fa-cogs"></i> Funcionalidades</a>
+            <a class="nav-link" href="#how-it-works"><i class="fas fa-cogs mr-2"></i>Como Funciona</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#how-to-use"><i class="fas fa-question-circle"></i> Como Usar</a>
+            <a class="nav-link" href="#screenshots"><i class="fas fa-image mr-2"></i>Screenshots</a>
           </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-light" href="./dist/blackwing.exe"><i class="fas fa-download"></i>
-              Download</a>
+          <li class="nav-item ml-lg-3">
+            <a class="btn btn-download" href="./dist/blackwing.exe">
+              <i class="fas fa-download mr-2"></i>Download
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <!-- Header -->
-  <header class="header text-white text-center" style="background-color: #000000;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8 mx-auto">
-          <h1 class="mt-5 animated-text">
-            <i id="danger" class="fas fa-skull-crossbones fa-1x ">ㅤ
-            </i>Blackwing
-          </h1>
-          <p class="lead mb-5">O killer de processos do Windows: mate qualquer processo travado com facilidade e
-            segurança.</p>
+  <!-- Hero Section - Dark Aggressive Style -->
+  <section class="hero bg-black position-relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="hero-glitch"></div>
+    <div class="hero-scanlines"></div>
+    <div class="hero-grid"></div>
+    <div class="container position-relative z-index-2">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center" data-aos="fade-down">
+          <!-- Glitch text effect -->
+          <div class="glitch-wrapper">
+            <h1 class="hero-title glitch" data-text="BLACKWING">
+              BLACKWING
+            </h1>
+          </div>
+          <br>
+          <!-- Buttons with hover effects - Versão Corrigida -->
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="./dist/blackwing.exe" class="btn btn-hacker btn-lg mr-3 mb-3" download
+              onclick="event.stopPropagation()">
+              <span class="btn-inner">
+                <i class="fas fa-download mr-2"></i>BAIXAR AGORA
+              </span>
+            </a>
+            <a href="#features" class="btn btn-outline-hacker btn-lg mb-3" onclick="event.stopPropagation()">
+              <span class="btn-inner">
+                <i class="fas fa-terminal mr-2"></i>VER COMANDOS
+              </span>
+            </a>
+          </div>
         </div>
-        <div class="col-lg-4 text-center">
-          <div class="btn-group">
-            <a href="./dist/blackwing.exe" class="btn btn-lg btn-outline-light mr-2">Baixar blackwing</a>
+      </div>
+      <!-- Animated terminal window showing process killing -->
+      <div class="hero-terminal" data-aos="zoom-in" data-aos-delay="400">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+          </div>
+          <div class="terminal-title">BLACKWING.exe --kill-all --force</div>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">> Inicializando BLACKWING v3.1.4...</div>
+          <div class="terminal-line">> Escaneando processos em execução...</div>
+          <div class="terminal-line blink">> Terminado: chrome.exe (PID: 1428)</div>
+          <div class="terminal-line blink">> Terminado: spotify.exe (PID: 2156)</div>
+          <div class="terminal-line blink">> Terminado: teams.exe (PID: 3044)</div>
+          <div class="terminal-line success">> Sucesso: 12 processos terminados</div>
+          <div class="terminal-line">> Recursos liberados: 2.4GB RAM</div>
+          <div class="terminal-line">> _</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section -->
+  <section id="features" class="section-light">
+    <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-up">RECURSOS PODEROSOS</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="feature-title">MORTE RÁPIDA</h3>
+            <p class="feature-text">
+              Encerre processos instantaneamente sem precisar abrir o Gerenciador de Tarefas.
+            </p>
+            <ul class="feature-list">
+              <li>Força o encerramento de processos rebeldes</li>
+              <li>Interface simples e direta</li>
+              <li>Execução em segundos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="feature-title">SEGURANÇA</h3>
+            <p class="feature-text">
+              Proteção contra encerramento acidental de processos críticos do sistema.
+            </p>
+            <ul class="feature-list">
+              <li>Lista de processos protegidos</li>
+              <li>Alertas de segurança</li>
+              <li>Confirmação antes de encerrar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3 class="feature-title">DESEMPENHO</h3>
+            <p class="feature-text">
+              Libere recursos do sistema encerrando processos desnecessários.
+            </p>
+            <ul class="feature-list">
+              <li>Visualização de uso de recursos</li>
+              <li>Identifica processos pesados</li>
+              <li>Melhora a resposta do sistema</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </header>
-
-  <!-- Sobre -->
-  <section id="about" class="py-5 bg-light">
+  </section>
+  <!-- How It Works -->
+  <section id="how-it-works" class="section-dark">
     <div class="container">
+      <h2 class="section-title text-center" data-aos="fade-up">COMO FUNCIONA</h2>
       <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading">Sobre o blackwing</h2>
-          <p class="text-muted" style="font-size: 1.25rem;">
-            O <strong>blackwing</strong> é um software simples e eficiente para Windows, desenvolvido para encerrar
-            processos travados ou indesejados com apenas alguns cliques. Ideal para quem precisa de mais controle sobre
-            o sistema e deseja eliminar rapidamente programas que não respondem.
-          </p>
-        </div>
-      </div>
-      <div class="row mt-4 justify-content-center">
-        <div class="col-md-4 text-center">
-          <div class="feature-item">
-            <i class="fas fa-bolt feature-icon"></i>
-            <h3 class="feature-title">Rápido e Eficiente</h3>
-            <p class="text-muted">Encerre processos instantaneamente, sem precisar abrir o Gerenciador de Tarefas.</p>
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 class="feature-title">LISTAGEM</h3>
+            <p class="feature-text">
+              Blackwing escaneia e lista todos os processos em execução no seu Windows.
+            </p>
           </div>
         </div>
-        <div class="col-md-4 text-center">
-          <div class="feature-item">
-            <i class="fas fa-shield-alt feature-icon"></i>
-            <h3 class="feature-title">Seguro</h3>
-            <p class="text-muted">Somente processos selecionados por você são finalizados, evitando riscos ao sistema.
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 class="feature-title">SELEÇÃO</h3>
+            <p class="feature-text">
+              Selecione os processos que deseja encerrar ou use a busca rápida.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 class="feature-title">CONFIRMAÇÃO</h3>
+            <p class="feature-text">
+              Blackwing verifica se o processo é seguro para encerramento.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 class="feature-title">EXECUÇÃO</h3>
+            <p class="feature-text">
+              Comando de encerramento é enviado e o processo é eliminado.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Segurança -->
-  <section id="security" class="py-5">
+  <!-- Screenshots -->
+  <section id="screenshots" class="section-light py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading">Segurança do blackwing</h2>
-          <div class="row justify-content-center">
-            <div class="col-md-10">
-              <div class="row mb-4">
-                <div class="col-auto text-center">
-                  <i id="danger" class="fas fa-lock fa-3x text-white"></i>
-                </div>
-                <div class="col">
-                  <p class="text-muted">
-                    O blackwing não coleta nenhum dado do usuário e não requer conexão com a internet. Todo o controle é
-                    feito localmente, garantindo sua privacidade.
-                  </p>
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-auto text-center">
-                  <i id="danger" class="fas fa-user-shield fa-3x text-white"></i>
-                </div>
-                <div class="col">
-                  <p class="text-muted">
-                    Desenvolvido em Python, o blackwing é leve, portátil e não instala serviços ocultos no seu
-                    computador.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-auto text-center">
-                  <i id="danger" class="fas fa-check-circle fa-3x text-white"></i>
-                </div>
-                <div class="col">
-                  <p class="text-muted">
-                    O software foi testado para garantir que apenas processos selecionados sejam encerrados, evitando
-                    encerramentos acidentais de processos críticos do sistema.
-                  </p>
-                </div>
-              </div>
+      <h2 class="section-title text-center mb-5" data-aos="fade-up">INTERFACE</h2>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-10" data-aos="zoom-in" data-aos-delay="100">
+          <div class="screenshot-card shadow-lg"
+            style="background: rgba(30,30,30,0.85); padding: 32px; border-radius: 10px;">
+            <img src="./src/assets/img/web/img1.png" alt="Lista de Processos" class="img-fluid d-block mx-auto"
+              style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.45); min-height: 400px;">
+            <div class="text-center mt-4">
+              <h4 class="font-weight-bold" style="color: #fff;">Visual moderno e intuitivo</h4>
+              <p class="text-muted mb-0" style="font-size: 1.15rem;">
+                Gerencie e encerre processos facilmente com uma interface clara, responsiva e amigável.<br>
+                Veja todos os detalhes dos processos em tempo real e utilize a busca instantânea para encontrar o que
+                precisa.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Funcionalidades -->
-  <section id="features" class="py-5" style="background-color: black !important;">
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title text-white" data-aos="fade-up">PRONTO PARA DOMINAR SEUS PROCESSOS?</h2>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Baixe agora o Blackwing e tenha controle total sobre o que roda no seu Windows.
+      </p>
+      <a href="./dist/blackwing.exe" class="btn btn-download btn-lg" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-download mr-2"></i>Baixar Agora - Grátis
+      </a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="section-heading text-center" style="color: #fff !important;">Funcionalidades do blackwing</h2>
-          <p class="text-center mb-5" style="color: #e0e0e0 !important;">Veja o que o blackwing pode fazer por você:</p>
-          <ul class="list-unstyled">
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> Listagem de todos os
-              processos ativos do Windows</li>
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> Busca rápida por nome
-              do processo</li>
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> Encerramento de
-              processos travados ou indesejados</li>
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> Interface gráfica
-              simples e intuitiva</li>
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> Proteção contra
-              encerramento de processos críticos do sistema</li>
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> Não requer
-              instalação: é só baixar e usar</li>
-            <li style="color: #e0e0e0 !important;"><i class="fas fa-check-circle text-purple"></i> 100% gratuito e sem
-              anúncios</li>
+        <div class="col-md-4 mb-5">
+          <img src="./blackwing.png" alt="Blackwing Logo" class="footer-logo">
+          <p class="mt-3">Blackwing é a solução definitiva para gerenciamento de processos no Windows. Rápido, seguro e
+            eficiente.</p>
+          <div class="social-icons mt-4">
+            <a href="https://github.com/EduardoDosSantosFerreira"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/eduardodossantosferreira/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://discordapp.com/users/eduardo_dsf"><i class="fab fa-discord"></i></a>
+            <a href="mailto:eduardosferreira69@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 mb-5">
+          <h5>Links</h5>
+          <ul class="footer-links">
+            <li><a href="#features">Recursos</a></li>
+            <li><a href="#how-it-works">Como Funciona</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="./dist/blackwing.exe">Download</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5">
+          <h5>Legal</h5>
+          <ul class="footer-links">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Licença</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5">
+          <h5>Contato</h5>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope mr-2"></i> eduardosferreira69@gmail.com</li>
+            <li><i class="fab fa-github mr-2"></i> EduardoDosSantosFerreira</li>
+            <li><i class="fab fa-discord mr-2"></i> eduardo_dsf</li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Como Usar -->
-  <section id="how-to-use" class="py-5" style="background-color: black;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading mb-4 text-white">Como Usar o blackwing</h2>
-          <div class="row text-white">
-            <div class="col-md-6">
-              <div class="feature-item">
-                <div class="feature-icon mb-3">
-                  <i class="fas fa-list fa-3x"></i>
-                </div>
-                <h3 class="feature-title">1. Visualize os Processos</h3>
-                <p ">Abra o blackwing e veja a lista de todos os processos em execução no seu Windows.</p>
-              </div>
-            </div>
-            <div class=" col-md-6">
-                <div class="feature-item">
-                  <div class="feature-icon mb-3">
-                    <i class="fas fa-search fa-3x"></i>
-                  </div>
-                  <h3 class="feature-title">2. Busque e Selecione</h3>
-                  <p ">Procure pelo nome do processo que deseja encerrar e selecione-o na lista.</p>
-              </div>
-            </div>
-          </div>
-          <div class=" row mt-4 text-white">
-                  <div class="col-md-6">
-                    <div class="feature-item">
-                      <div class="feature-icon mb-3">
-                        <i class="fas fa-skull-crossbones fa-3x"></i>
-                      </div>
-                      <h3 class="feature-title">3. Mate o Processo</h3>
-                      <p ">Clique em " Matar Processo" para encerrar imediatamente o processo selecionado.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="feature-item">
-                      <div class="feature-icon mb-3">
-                        <i class="fas fa-shield-alt fa-3x"></i>
-                      </div>
-                      <h3 class="feature-title">4. Segurança</h3>
-                      <p ">O blackwing alerta caso você tente encerrar um processo crítico do sistema.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="copyright text-center">
+        <p>&copy; 2025 Eduardo S Ferreira. Todos os direitos reservados. | Blackwing - Process Killer</p>
       </div>
     </div>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class=" py-5">
-                      <div class="container text-center">
-                        <div class="row justify-content-center align-items-center">
-                          <div class="col-md-12">
-                            <img src="./blackwing.png" id="footer-icon" alt="corvo" style="width: 50px;"
-                              class="footer-logo">
-                            <hr class="bg-white">
-                          </div>
-                          <div class="col-md-12">
-                            <a href="http://"><img src="./src/assets/img/icons/wts.png" alt="Whatsapp" title="Whatsapp"
-                                id="ico-ftr"></a>
-                            <a href="https://www.linkedin.com/in/eduardodossantosferreira/"><img
-                                src="./src/assets/img/icons/in.png" alt="Linkedin" title="Linkedin" id="ico-ftr"></a>
-                            <a href="https://discordapp.com/users/eduardo_dsf"><img src="./src/assets/img/icons/dc.png"
-                                alt="Discord" title="Discord" id="ico-ftr"></a>
-                            <a href="mailto:eduardosferreira69@gmail.com"><img src="./src/assets/img/icons/gmail.png"
-                                alt="Gmail" title="Gmail" id="ico-ftr"></a>
-                            <a href="https://github.com/EduardoDosSantosFerreira"><img
-                                src="./src/assets/img/icons/github.png" alt="Github" title="Github" id="ico-ftr"></a>
-                          </div>
-                        </div>
-                        <br>
-                        <p>&copy; 2025 Eduardo S Ferreira.</p>
-                      </div>
-                      </footer>
-
-                      <!-- Bootstrap JS, Popper.js, jQuery -->
-                      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                        crossorigin="anonymous"></script>
-                      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-                        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-                        crossorigin="anonymous"></script>
-                      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-                        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-                        crossorigin="anonymous"></script>
-                      <script src="./src/assets/js/script.js"></script>
+  </footer>
+  <!-- Bootstrap JS, Popper.js, jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    // Navbar scroll effect
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+    // Smooth scrolling for anchor links
+    $('a[href*="#"]').on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate(
+        {
+          scrollTop: $($(this).attr('href')).offset().top - 70,
+        },
+        500,
+        'linear'
+      );
+    });
+  </script>
 </body>
 
 </html>
